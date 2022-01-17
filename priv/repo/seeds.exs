@@ -17,7 +17,7 @@ alias Birma.{Meal, MealsIngredients, Ingredient, Repo}
 {:ok, steak} = Meal.add(%{name: "Steak", scheduled_date: Date.add(Date.utc_today(), -1)})
 {:ok, burgers} = Meal.add(%{name: "Burgers", scheduled_date: Date.add(Date.utc_today(), -2)})
 {:ok, sausage_and_cabbage} = Meal.add(%{name: "Sausage and Cabbage with Bacon", scheduled_date: Date.add(Date.utc_today(), 1)})
-
+{:ok, skipped} = Meal.add(%{name: "Skipped"})
 
 {:ok, beef} = Ingredient.add(%{name: "Ground Beef"})
 {:ok, onion} = Ingredient.add(%{name: "Onion"})

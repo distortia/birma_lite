@@ -19,6 +19,7 @@ defmodule BirmaWeb.Router do
 
     live "/", BirmaLive
     live "/plan", PlanLive
+    live "/meals", MealsLive
   end
 
   # Other scopes may use custom stacks.

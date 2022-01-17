@@ -59,4 +59,20 @@ defmodule Birma.Meal do
       })
     |> Repo.update()
   end
+
+  def add_to_plan(meal_id, scheduled_date) do
+    meal = get(meal_id)
+    meal
+    |> changeset(%{
+      scheduled_date: scheduled_date
+    })
+    |> Repo.update()
+  end
+
+  def remove_from_plan(meal_id) do
+    meal = get(meal_id)
+    meal
+    |> changeset(%{scheduled_date: nil})
+    |> Repo.update()
+  end
 end
